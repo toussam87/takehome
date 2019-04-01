@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="utf-8">
+    <head>
+        <link rel = "stylesheet" type = "text/css" href = "./main.css" />
+        <title>Moneyball Front End Coding Challenge - Static HTML</title>
+    </head>
+
+    <body>
+        <nav>
+            <ul class="mobileMainNav">
+                <li></li>
+            </ul>
+            <ul class="secondary">
+                <li><img src="../assets/img/FD_frontend_01.png" class="logo" /></li>
+                <li>Lobby</li>
+                <li>Upcoming</li>
+                <li class="selected">Live<span class="dropWhite"></span></li>
+                <li>History</li>
+            </ul>
+            <ul class="account">
+                <li>Help <span class="drop"></span></li>
+                <li><img src="../assets/img/FD_frontend_03.png" class="accountIcon" /> <span class="accountName">nbanaddio</span><span class="dropWhite push"></span> </li>
+                <li>
+                    <span class="bal">
+                        <span class="accountBal">$1,000,000 </span>
+                        <span class="bal">Balance</span>
+                    </span>
+                    <button class="addFunds" value="Add funds">Add funds</button>
+                </li>
+            </ul>
+        </nav>
+        <div class="wrapper">
+            <div class="gameStats">
+                <div class="scores">
+                    <div class="teamOne">
+                        <span class="team">Golden State<br> <span class="emp">Warriors</span></span>
+                        <span class="team score">96</span>
+                    </div>
+                    <div class="gameLocation">
+                        <div class="gameInfo">
+                            <span class="time">7:34</span>
+                            <span class="quarter">4th</span>    
+                        </div>
+                        <div class="stadiumLocation">Oracle Arena<br>Oakland, CA</div>
+                    </div>
+                    <div class="teamTwo">
+                        <span class="team score">81</span>
+                        <span class="team">Oklahoma City <br><span class="emp">Thunder</span></span>
+                    </div>
+                </div>
+                <div class="status">
+                    <span>Last Play: TV Timeout. Go Get A Snack</span>
+                </div>
+                <div class="stats">
+                    <div class="showStats">
+                        Show: <span class="recent">Recent Shots <span class="dropBlack"></span> </span>
+                    </div>
+                    <div class="team1CourtStats">
+                        <div class="team1Stats"> 
+                            <span class="statType">FG%</span>
+                            <span class="teamOne statNum">55.7%</span>
+                        </div>
+                        <div class="team1Stats"> 
+                            <span class="statType">FT%</span>
+                            <span class="teamOne statNum">60.0%</span>
+                        </div>
+                        <div class="team1Stats"> 
+                            <span class="statType">3P%</span>
+                            <span class="teamOne statNum">55.5%</span>
+                        </div>
+                    </div>
+                    <div class="gameCourt">
+                        <img src="../assets/img/FD_frontend_11.png"/>
+                    </div>
+                    <div class="team2CourtStats">
+                        <div class="team2Stats"> 
+                            <span class="statType">FG%</span>
+                            <span class="teamTwo statNum">47.1%</span>
+                        </div>
+                        <div class="team2Stats"> 
+                            <span class="statType">FT%</span>
+                            <span class="teamTwo statNum">80.0%</span>
+                        </div>
+                        <div class="team2Stats"> 
+                            <span class="statType">3P%</span>
+                            <span class="teamTwo statNum">36.4%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="byb">
+                <div class="playByPlay">
+                    <div class="heading">
+                        <span class="sectionHeading">Play by Play</span>
+                    </div>
+                    <div class="stat">
+                        <span class="playerImage"><img src="../assets/img/FD_frontend_14.png"></span>
+                        <div class="statInfo">
+                            <span class="time">7:34</span>
+                            <span class="quarter">4th</span>
+                            <div class="summary">
+                                <span class="player">Stephen Curry</span> makes 13-foot jumper. Assisted by <span class="player">Draymond Green.</span>
+                            </div>
+                        </div>
+                        <span class="currentScore">96-81, GS</span>
+                    </div>
+                    <div class="stat">
+                        <span class="playerImage"><img src="../assets/img/FD_frontend_17.png"></span>
+                        <div class="statInfo">
+                            <span class="time">7:46</span>
+                            <span class="quarter">4th</span>
+                            <div class="summary">
+                                <span class="player">Kevin Durant</span> misses 2-foot layup. Rebounded by <span class="player">Andrew Bogut.</span>
+                            </div>
+                        </div>
+                        <span class="currentScore">94-81, GS</span>
+                    </div>
+                    <div class="stat">
+                        <span class="playerImage"><img src="../assets/img/FD_frontend_19.png"></span>
+                        <div class="statInfo">
+                            <span class="time">7:34</span>
+                            <span class="quarter">4th</span>
+                            <div class="summary">
+                                <span class="player">Klay Thompson</span> misses 24-foot jumper. Rebounded by <span class="player">Serge Ibaka.</span>
+                            </div>
+                        </div>
+                        <span class="currentScore">94-81, GS</span>
+                    </div>
+                    <div class="stat">
+                        <span class="playerImage"><img src="../assets/img/FD_frontend_21.png"></span>
+                        <div class="statInfo">
+                            <span class="time">7:34</span>
+                            <span class="quarter">4th</span>
+                            <div class="summary">
+                                <span class="player">Kevin Durant</span> turnover.
+                            </div>
+                        </div>
+                        <span class="currentScore">94-81, GS</span>
+                    </div>
+                    <div class="stat">
+                        <span class="playerImage"><img src="../assets/img/FD_frontend_23.png"></span>
+                        <div class="statInfo">
+                            <span class="time">7:34</span>
+                            <span class="quarter">4th</span>
+                            <div class="summary">
+                                <span class="player">Stephen Curry</span> makes free throw.
+                            </div>
+                        </div>
+                        <span class="currentScore">94-81, GS</span>
+                    </div>
+                </div>
+
+
+            <div class="gameStatsStats">
+                <div class="heading">
+                    <span class="sectionHeading">Stats</span>
+                </div>
+            </div>
+            </div>
+        
+            <div class="yourScores">
+                <div class="heading">
+                    <span class="sectionHeading">Your Scoring</span>
+                    <span class="games"></span>
+                </div>
+                </div> 
+            </div>
+        </div>
+        <section class="footer">
+            <div class="otherSports">
+                <span class="selected sport"><strong>NBA</strong></span>
+                <span class="sport">MLB</span>
+                <span class="sport">NCAAF</span>
+            </div>
+            <div class="otherSportsScore">
+                <span class="leftArrow"><img src="../assets/img/rightArrow.png"/></span>
+                <span class="currentScoreFooter">
+                    <div class="one">
+                        <span class="team">Warriors</span> <span class="score">96</span>
+                        <span class="team">Thunder</span> <span class="score">81</span>
+                    </div>
+                    <div class="two">
+                        <span class="teamOne">
+                            GSW
+                        </span>
+                        <span class="topPlayer">
+                            <span class="player">S. Curry, PG</span>
+                            <span class="playerStats">23 points, 6 assists</span>
+                        </span>
+                    </div>
+                    <div class="three">
+                        <span class="teamTwo">
+                            OKC
+                        </span>
+                        <span class="topPlayer">
+                            <span class="player">K. Durrant, SF</span>
+                            <span class="playerStats">30 points, 9 Rebounds</span>
+                        </span>
+                    </div>
+                    <div class="etc">
+                        7:34 4th - TV:ESPN
+                    </div>
+                </span>
+                <span class="otherScore">
+                    <span class="team">CHI</span><span class="score">56</span>
+                    <span class="team">BOS</span><span class="score">54</span>
+                    <span class="etc">6:33 3rd</span>
+                </span>
+                <span class="otherScore">
+                    <span class="team">ATL</span><span class="score">26</span>
+                    <span class="team">MEM</span><span class="score">24</span>
+                    <span class="etc">12:00 2nd</span>
+                </span>
+                <span></span>
+                <span class="rightArrow"><img src="../assets/img/leftArrow.png"/></span>
+            </div>
+        </section>
+    </body>
+</html>

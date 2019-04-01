@@ -1,0 +1,808 @@
+@font-face {
+  font-family: 'GothamLight';
+  src: url('../assets/fonts/Gotham-Light.otf'); 
+}
+
+@font-face {
+  font-family: 'GothamMedium';
+  src: url('../assets/fonts/GothamMedium_1.ttf'); 
+}
+@font-face {
+  font-family: 'GothamRegular';
+  src: url('../assets/fonts/GothamMedium_1.ttf'); 
+}
+
+body {
+  margin: 0;
+}
+
+@media only screen and (max-width: 600px) { 
+  nav {
+    color: #edeeef;
+    background-color: #2d363c;
+    width: 100%x;
+    display: block;
+    justify-content: start;
+  }
+  ul {
+    display: block;
+    padding-right: 20px;
+    margin: 0px;
+  }
+  li {
+    display: block;
+    border-bottom: solid #5f6b72 1px;
+    padding: 10px 5px;
+    border-right: 0px;
+  }
+  li:last-child {
+    border-bottom: 0px;
+  }
+  .account li:first-child {
+    border-top: solid #5f6b72 1px;
+  }
+  .mobileMainNav {
+    display: block;
+    padding: 0px;
+  }
+
+  .mobileMainNav li::after {
+    content: url('../assets/img/mobNav.svg')
+  }
+  .secondary,
+  .account {
+    display: none;
+  }
+  .wrapper {
+    width: 85%;
+    /* display: grid; */
+    /* grid-template-columns: 100%; */
+    grid-gap: 10px;
+    margin: 15px auto 0px;
+  }
+
+  .gameStats {
+    grid-column: 1/2;
+    grid-row: 1;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px 0px;
+  }
+
+  .gameStats .scores{
+    /* display:grid;
+    grid-template-columns: 40% 20% 40%; */
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 0px 20px;
+  }
+
+  .scores span {
+    display: inline-block;
+    margin: 0;
+  }
+
+  .team {
+    width: 80%;
+    font-size: 18px;
+    font-family: GothamLight;
+    text-transform: uppercase;
+  }
+  .emp {
+    font-family: GothamMedium;
+  }
+  .score {
+    width: 18%;
+    font-family: GothamMedium;
+    font-size: 56px;
+  }
+  .teamOne{
+    /* grid-row: 1; */
+    color: #fdbb00;
+    text-align: left;
+  }
+  .gameLocation{
+    /* grid-column: 2/3;
+    grid-row: 1; */
+    text-align: center;
+    border-left: 1px solid #bcbcbc;
+    border-right: 1px solid #bcbcbc;
+    margin: 20px 0;
+  }
+  .teamTwo{
+    /* grid-column: 3/3;
+    grid-row: 1; */
+    color: #0079c5;
+    text-align: right;
+  }
+  .status {
+    grid-column: span 3;
+    text-align: center;
+    background-color: #f2f2f2;
+    padding: 6px 0px;
+    font-family: GothamLight;
+    font-size: 12px;
+    color: #000;
+    text-transform: uppercase;
+  }
+
+  .recent {
+    color: #000;
+    font-family: GothamMedium
+  }
+
+  .stats {
+    /* display: grid;
+    grid-template-columns: 25% 50% 25%; */
+  }
+  .showStats {
+    grid-column: span 3;
+    grid-row: 1;
+    text-align: center;
+    margin: 10px 0px;
+    font-size: 14px;
+    font-family: GothamLight;
+    text-transform: uppercase;
+  }
+  .team1CourtStats {
+    grid-column: 1;
+    grid-row: 2;
+    text-align: center;
+  }
+  .gameCourt {
+    grid-column: 2;
+    grid-row: 2;
+    text-align: center;
+  }
+  .team1Stats,
+  .team2Stats {
+    width: 50%;
+    border-bottom: 1px solid #e5e5e5;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  .team2CourtStats{
+    grid-column: 3;
+    grid-row: 2;
+    text-align: center;
+  }
+  .statType {
+    color: #808080;
+    display: block;
+    font-size: 18px;
+    font-family: GothamLight;
+  }
+
+  .statNum {
+    font-size: 20px;
+    font-family: GothamLight;
+    margin-top: 4px;
+    display: inline-block;
+  }
+  .team1Stats:last-of-type,
+  .team2Stats:last-of-type {
+    border: 0;
+  }
+
+  .byb {
+    /* grid-row: 2;
+    display: grid;
+    grid-template-columns: 50%; 
+    grid-gap: 10px;*/
+  }
+
+  .playByPlay {
+    grid-column: 1/2;
+    grid-row: 1;
+    background-color: #fff;
+    padding-bottom: 20px;
+  }
+  .stat{
+    display: block;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  .playerImage {
+    display: inline-block;
+    width: 16%;
+  }
+  .statInfo {
+    display: inline-block;
+    width: 60%;
+  }
+  .time,
+  .quarter {
+    display: inline-block;
+    color: #000;
+    font-family: GothamLight;
+    font-size: 12px;
+  }
+
+  .stadiumLocation {
+    font-family: GothamLight;
+    font-size: 12px;
+    margin-top: 2px;
+    color: #747474;
+  }
+  .summary {
+    display: block;
+    font-family: GothamLight;
+    font-size: 14px;
+  }
+  .player {
+    font-family: GothamMedium;
+  }
+  .currentScore {
+    display: inline-block;
+    width: 20%;
+    font-family: GothamMedium;
+    font-size: 14px;
+  }
+  .gameStatsStats {
+    grid-column: 2;
+    grid-row: 1;
+    background-color: #fff;
+  }
+  .heading {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+  }
+  .sectionHeading {
+    font-family: GothamMedium;
+    font-size: 13px;
+    text-transform: uppercase;
+    padding: 10px 0px;
+  }
+  .yourScores{
+    grid-column: 2/2;
+    grid-row: span 3;
+    background-color: #fff;
+  }
+
+  .footer {
+    width: 100%;
+  }
+  .otherSports {
+    background-color: #2d363b;
+    color: #676b6e;
+    font-family: GothamLight;
+    padding-left: 10px;
+  }
+
+  .sport {
+    border-right: 1px solid #676b6e;
+    width: 32%;
+    display: inline-block;
+    color: #fff;
+  }
+  .sport.selected {
+    background-color: #71ab3e;
+    font-family: GothamLight;
+  }
+
+  .leftArrow,
+  .rightArrow {
+    display: none;
+  }
+  .otherSportsScore{
+    /* display: grid;
+    grid-template-columns: 1% 45% 8% 8% 37% 1%; */
+    background-color: #4f5961;
+    color: #9ea2a6;
+    font-family: GothamLight;
+  }
+
+  .currentScoreFooter {
+    /* background-color: #616a71; */
+    color: #fff;
+  }
+  .currentScoreFooter .one,
+  .currentScoreFooter .two,
+  .currentScoreFooter .three{
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .currentScoreFooter .one {
+    border-bottom: 0px;
+    padding-bottom: 0px;
+  }
+  .currentScoreFooter .two,
+  .currentScoreFooter .three {
+    width: 48%;
+    display: inline-block;
+    padding-top: 10px;
+    margin-bottom: 0px;
+  }
+
+  .footer .team,
+  .footer .score  {
+    width: 60%;
+    display: inline-block;
+    color: #fff;
+    text-align: left;
+    font-size: 15px;
+    padding: 6px;
+  }
+  .currentScoreFooter .teamOne,
+  .currentScoreFooter .teamTwo,
+  .currentScoreFooter .topPlayer {
+    color: #fff;
+    font-size: 14px;
+    margin-right: 20px;
+  }
+
+
+  .footer .player,
+  .footer .playerStats {
+    display: block;
+  }
+  .footer .player {
+    font-size: 14px;
+  }
+
+  .footer .teamOne,
+  .footer .teamTwo{
+    font-family: GothamMedium;
+    vertical-align: text-top;
+  }
+  .playerStats {
+    font-size: 12px;
+    margin-top: 6px;
+  }
+  .currentScoreFooter .score {
+    font-family: GothamMedium;
+    display: inline-block;
+    width: 5%;
+  }
+  .etc {
+    display: block;
+    font-size: 12px;
+    font-family: GothamLight;
+    margin: 0px;
+    /* border-bottom: 1px solid #fff; */
+    padding-bottom: 16px;
+  }
+  .otherScore{
+    border: 0px;
+    margin: 0 auto;
+    display: block;
+    width: 70%;
+}
+  }
+  .otherScore .team,
+  .otherScore .score {
+    color: #b5b8bb;
+    width: 35%;
+    font-size: 15px;
+    padding: 6px 0px 0px 9px;
+  }
+  .otherScore .score {
+    text-align: right;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    background-color: #bcbcbc;
+  }
+  .mobileMainNav {
+    display: none;
+  }
+  
+  nav {
+    color: #edeeef;
+    background-color: #2d363c;
+    display: grid;
+    grid-template-columns: 3;
+    font-family: GothamLight;
+    font-size: 13px;
+  }
+   ul {
+    list-style: none;
+    display: inline-block;
+  }
+
+  li {
+    display: inline-block;
+    border-left: solid #5f6b72 1px;
+    padding: 6px 24px;
+    vertical-align: middle;
+    height: 15px;
+    margin: 17px 0;
+  }
+  .logo {
+    width: 90%;
+    margin-top: -5px;
+  }
+  .accountIcon{
+    width: 20px;
+    height: 20px;
+  }
+  .accountName {
+    vertical-align: super;
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .account {
+    text-align: right;
+    font-family: GothamLight;
+  }
+  .accountBal {
+    display: block;
+    font-family: GothamMedium;
+    font-size: 12px;
+    margin-bottom: 3px;
+  }
+  .bal {
+    font-size: 10px;
+    text-transform: uppercase;
+    display: inline-block;
+  }
+  .addFunds {
+    background-color: #71ab3e;
+    color: #fff;
+    border-radius: 3px;
+    border: 0px;
+    padding: 8px 7px;
+    margin: 0;
+    font-family: GothamLight;
+    vertical-align: super;
+    display: inline-block;
+  }
+  .account li:last-child {
+    border-right: 0px;
+  }
+  
+  li:last-child {
+    border-right: solid #5f6b72 1px;
+  }
+  
+  .secondary {
+    grid-column: 1 / 3;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  /* .secondary .selected {
+    background-color: #4f5a62;
+  } */
+
+  .dropWhite {
+    width: 10px;
+    height: 9px;
+    background-image: url(../assets/img/arrow-204-16.png);
+    display: inline-block;
+    background-size: 10px;
+    margin-left: 5px;
+  }
+
+  .dropBlack {
+    width: 10px;
+    height: 9px;
+    background-image: url(../assets/img/arrow-down-sign-to-navigate.png);
+    display: inline-block;
+    background-size: 10px;
+    margin-left: 5px;
+  }
+  .push {
+    margin-bottom: 5px;
+    margin-left: 0px;
+  }
+  .account {
+    grid-column: 3 / 3;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .wrapper {
+    width: 85%;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-gap: 10px;
+    margin: 15px auto 0px;
+  }
+
+  .gameStats {
+    grid-column: 1/2;
+    grid-row: 1;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px 0px;
+  }
+
+  .gameStats .scores{
+    display:grid;
+    grid-template-columns: 40% 20% 40%;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 0px 20px;
+  }
+
+  .scores span {
+    display: inline-block;
+    margin: 0;
+  }
+
+  .team {
+    width: 70%;
+    font-size: 18px;
+    font-family: GothamLight;
+    text-transform: uppercase;
+  }
+  .emp {
+    font-family: GothamMedium;
+  }
+  .score {
+    width: 15%;
+    font-family: GothamMedium;
+    font-size: 56px;
+  }
+  .teamOne{
+    grid-row: 1;
+    color: #fdbb00;
+    text-align: left;
+  }
+  .gameLocation{
+    grid-column: 2/3;
+    grid-row: 1;
+    text-align: center;
+    border-left: 1px solid #bcbcbc;
+    border-right: 1px solid #bcbcbc;
+  }
+  .teamTwo{
+    grid-column: 3/3;
+    grid-row: 1;
+    color: #0079c5;
+    text-align: right;
+  }
+  .status {
+    grid-column: span 3;
+    text-align: center;
+    background-color: #f2f2f2;
+    padding: 6px 0px;
+    font-family: GothamLight;
+    font-size: 12px;
+    color: #000;
+    text-transform: uppercase;
+  }
+
+  .recent {
+    color: #000;
+    font-family: GothamMedium
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+  }
+  .showStats {
+    grid-column: span 3;
+    grid-row: 1;
+    text-align: center;
+    margin: 10px 0px;
+    font-size: 14px;
+    font-family: GothamLight;
+    text-transform: uppercase;
+  }
+  .team1CourtStats {
+    grid-column: 1;
+    grid-row: 2;
+    text-align: center;
+  }
+  .gameCourt {
+    grid-column: 2;
+    grid-row: 2;
+    text-align: center;
+  }
+  .team1Stats,
+  .team2Stats {
+    width: 50%;
+    border-bottom: 1px solid #e5e5e5;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  .team2CourtStats{
+    grid-column: 3;
+    grid-row: 2;
+    text-align: center;
+  }
+  .statType {
+    color: #808080;
+    display: block;
+    font-size: 18px;
+    font-family: GothamLight;
+  }
+
+  .statNum {
+    font-size: 20px;
+    font-family: GothamLight;
+    margin-top: 4px;
+    display: inline-block;
+  }
+  .team1Stats:last-of-type,
+  .team2Stats:last-of-type {
+    border: 0;
+  }
+
+  .byb {
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 50%;
+    grid-gap: 10px;
+  }
+
+  .playByPlay {
+    grid-column: 1/2;
+    grid-row: 1;
+    background-color: #fff;
+    padding-bottom: 20px;
+  }
+  .stat{
+    display: block;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  .playerImage {
+    display: inline-block;
+    width: 16%;
+  }
+  .statInfo {
+    display: inline-block;
+    width: 60%;
+  }
+  .time,
+  .quarter {
+    display: inline-block;
+    color: #000;
+    font-family: GothamLight;
+    font-size: 12px;
+  }
+
+  .stadiumLocation {
+    font-family: GothamLight;
+    font-size: 12px;
+    margin-top: 2px;
+    color: #747474;
+  }
+  .summary {
+    display: block;
+    font-family: GothamLight;
+    font-size: 14px;
+  }
+  .player {
+    font-family: GothamMedium;
+  }
+  .currentScore {
+    display: inline-block;
+    width: 20%;
+    font-family: GothamMedium;
+    font-size: 14px;
+  }
+  .gameStatsStats {
+    grid-column: 2;
+    grid-row: 1;
+    background-color: #fff;
+  }
+  .heading {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+  }
+  .sectionHeading {
+    font-family: GothamMedium;
+    font-size: 13px;
+    text-transform: uppercase;
+    padding: 10px 0px;
+  }
+  .yourScores{
+    grid-column: 2/2;
+    grid-row: span 3;
+    background-color: #fff;
+  }
+
+  .footer {
+    width: 100%;
+  }
+  .otherSports {
+    background-color: #2d363b;
+    color: #676b6e;
+    font-family: GothamLight;
+    padding-left: 10px;
+  }
+
+  .sport {
+    border-right: 1px solid #676b6e;
+    width: 150px;
+    display: inline-block;
+    color: #fff;
+  }
+  .sport.selected {
+    background-color: #71ab3e;
+    font-family: GothamLight;
+  }
+
+  .otherSportsScore{
+    display: grid;
+    grid-template-columns: 1% 45% 8% 8% 37% 1%;
+    background-color: #4f5961;
+    color: #9ea2a6;
+    font-family: GothamLight;
+  }
+
+  .currentScoreFooter {
+    background-color: #616a71;
+    color: #fff;
+  }
+  .currentScoreFooter .one,
+  .currentScoreFooter .two,
+  .currentScoreFooter .three{
+    display: inline-block;
+    width: 32%;
+  }
+  .footer .team,
+  .footer .score  {
+    width: 60%;
+    display: inline-block;
+    color: #fff;
+    text-align: left;
+    font-size: 15px;
+    padding: 6px;
+  }
+
+  .currentScoreFooter .teamOne,
+  .currentScoreFooter .teamTwo,
+  .currentScoreFooter .topPlayer {
+    display: inline-block;
+    color: #fff;
+    font-size: 14px;
+    margin-right: 20px;
+  }
+
+
+  .footer .player,
+  .footer .playerStats {
+    display: block;
+  }
+  .footer .player {
+    font-size: 14px;
+  }
+
+  .footer .teamOne,
+  .footer .teamTwo{
+    font-family: GothamMedium;
+    vertical-align: text-top;
+    width: 10%;
+  }
+  .playerStats {
+    font-size: 12px;
+    margin-top: 6px;
+  }
+  .currentScoreFooter .score {
+    font-family: GothamMedium;
+    display: inline-block;
+    width: 5%;
+  }
+  .etc {
+    display: block;
+    font-size: 12px;
+    font-family: GothamLight;
+    margin: 10px 0px 10px 10px;
+  }
+  .otherScore{
+    border-right: 1px solid #676b6e;
+  }
+  .otherScore .team,
+  .otherScore .score {
+    color: #b5b8bb;
+    width: 35%;
+    font-size: 15px;
+    padding: 6px 0px 0px 9px;
+  }
+  .otherScore .score {
+    text-align: right;
+  }
+}
